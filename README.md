@@ -1,100 +1,26 @@
 # Would You Rather Project
 
-This is the implementation for the final assessment project for Udacity's React & Redux course.
+This is the implementation for the final assessment project for Udacity's React & Redux course. Would You Rather is a web application that lets the user play the game - Would You Rather - in which the user is provided a question with two possible answers and the user has to select if they would rather choose Option A or Option B.
 
-The `_DATA.js` file represents a fake database and methods that let you access the data. 
+## Features
+
+* Login - Select from a list of 3 users to login
+* Unanswered questions list - Default view upon login
+* Answered questions list - Secondary tab on the landing page
+* Create a question - User can create a new poll
+* View and answer questions - User can view and answer questions
+* Leader board - User can check score
+* Logout - Upon logout user is returned to the login page
+* 404 page - A 404 error page is displayed if the page is not found
+
+# Project Setup
+
+* project dependencies can be installed with `npm install`
+* start the development server with `npm start` to view the application on `http://localhost:3000/`
+
+# Other info
+
+The `_DATA.js` file represents a fake database and methods that let you access the data. Page refresh will clear the database.
 
 This project uses the [Create React App](https://github.com/facebook/create-react-app) to bootstrap the project.
-
-## Data
-
-There are two types of objects stored in our database:
-
-* Users
-* Questions
-
-### Users
-
-Users include:
-
-| Attribute    | Type             | Description           |
-|-----------------|------------------|-------------------         |
-| id                 | String           | The user’s unique identifier |
-| name          | String           | The user’s first name  and last name     |
-| avatarURL  | String           | The path to the image file |
-| questions | Array | A list of ids of the polling questions this user created|
-| answers      | Object         |  The object's keys are the ids of each question this user answered. The value of each key is the answer the user selected. It can be either `'optionOne'` or `'optionTwo'` since each question has two options.
-
-### Questions
-
-Questions include:
-
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| id                  | String | The question’s unique identifier |
-| author        | String | The author’s unique identifier |
-| timestamp | String | The time when the question was created|
-| optionOne | Object | The first voting option|
-| optionTwo | Object | The second voting option|
-
-### Voting Options
-
-Voting options are attached to questions. They include:
-
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| votes             | Array | A list that contains the id of each user who voted for that option|
-| text                | String | The text of the option |
-
-The UI interacts with the database via 4 methods:
-
-* `_getUsers()`
-* `_getQuestions()`
-* `_saveQuestion(question)`
-* `_saveQuestionAnswer(object)`
-
-1) `_getUsers()` Method
-
-*Description*: Get all of the existing users from the database.  
-*Return Value*: Object where the key is the user’s id and the value is the user object.
-
-2) `_getQuestions()` Method
-
-*Description*: Get all of the existing questions from the database.  
-*Return Value*: Object where the key is the question’s id and the value is the question object.
-
-3) `_saveQuestion(question)` Method
-
-*Description*: Save the polling question in the database.  
-*Parameters*:  Object that includes the following properties: `author`, `optionOneText`, and `optionTwoText`. More details about these properties:
-
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| author | String | The id of the user who posted the question|
-| optionOneText| String | The text of the first option |
-| optionTwoText | String | The text of the second option |
-
-*Return Value*:  An object that has the following properties: `id`, `author`, `optionOne`, `optionTwo`, `timestamp`. More details about these properties:
-
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| id | String | The id of the question that was posted|
-| author | String | The id of the user who posted the question|
-| optionOne | Object | The object has a text property and a votes property, which stores an array of the ids of the users who voted for that option|
-| optionTwo | Object | The object has a text property and a votes property, which stores an array of the ids of the users who voted for that option|
-|timestamp|String | The time when the question was created|
-
-4) `_saveQuestionAnswer(object)` Method
-
-*Description*: Save the answer to a particular polling question in the database.
-*Parameters*: Object that contains the following properties: `authedUser`, `qid`, and `answer`. More details about these properties:
-
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| authedUser | String | The id of the user who answered the question|
-| qid | String | The id of the question that was answered|
-| answer | String | The option the user selected. The value should be either `"optionOne"` or `"optionTwo"`|
-
-## Contributing
-
-This project was created using the starter code provided for *all* Udacity students. For details, check out [CONTRIBUTING.md](https://github.com/udacity/reactnd-project-would-you-rather-starter/blob/master/CONTRIBUTING.md).
+This project also uses [Material UI](https://material-ui.com/) for UI components, [React-Redux](https://react-redux.js.org/) for application state management and [React Router](https://reactrouter.com/web/guides/quick-start) for routing. Images are from [Pexels](https://www.pexels.com/)
