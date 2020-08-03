@@ -3,7 +3,7 @@ let users = {
   janesmith: {
     id: 'janesmith',
     name: 'Jane Smith',
-    avatarURL: '/images/profilepic-1.jpg',
+    avatarURL: 'https://github.com/lshah/would-you-rather/blob/master/images/profilepic-3.jpg?raw=true',
     answers: {
       "8xf0y6ziyjabvozdd253nd": 'optionOne',
       "6ni6ok3ym7mf1p33lnez": 'optionTwo',
@@ -15,7 +15,7 @@ let users = {
   oliverjames: {
     id: 'oliverjames',
     name: 'Oliver James',
-    avatarURL: '/images/profilepic-2.jpg',
+    avatarURL: 'https://github.com/lshah/would-you-rather/blob/master/images/profilepic-2.jpg?raw=true',
     answers: {
       "vthrdm985a262al8qx3do": 'optionOne',
       "xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -25,7 +25,7 @@ let users = {
   johndoe: {
     id: 'johndoe',
     name: 'John Doe',
-    avatarURL: '/images/profilepic-3.jpg',
+    avatarURL: 'https://github.com/lshah/would-you-rather/blob/master/images/profilepic-1.jpg?raw=true',
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
       "vthrdm985a262al8qx3do": 'optionTwo',
