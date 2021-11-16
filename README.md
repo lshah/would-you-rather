@@ -12,6 +12,7 @@ This is the implementation for the final assessment project for Udacity's React 
 * Leader board - User can check score
 * Logout - Upon logout user is returned to the login page
 * 404 page - A 404 error page is displayed if the page is not found
+* test
 
 # Project Setup
 
